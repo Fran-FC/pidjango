@@ -1,0 +1,143 @@
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+
+<table  id="tabla_horarios">
+    <thead>
+        <tr>
+            <th scope="col">Horario</th>
+            <th scope="col">Lunes</th>
+            <th scope="col">Martes</th>
+            <th scope="col">Miércoles</th>
+            <th scope="col">Jueves</th>
+            <th scope="col">Viernes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr >
+            <td>07:30-08:30 </td>
+            <td><input type="checkbox" value="L0"></td>
+            <td><input type="checkbox" value="M0"></td>
+            <td><input type="checkbox" value="X0"></td>
+            <td><input type="checkbox" value="J0"></td>
+            <td><input type="checkbox" value="V0"></td>
+        </tr>
+        <tr>
+            <td>08:30-09:30 </td>
+            <td><input type="checkbox" value="L1"></td>
+            <td><input type="checkbox" value="M1"></td>
+            <td><input type="checkbox" value="X1"></td>
+            <td><input type="checkbox" value="J1"></td>
+            <td><input type="checkbox" value="V1"></td>
+        </tr>
+        <tr >
+            <td>09:30-10:30 </td>
+            <td><input type="checkbox" value="L2"></td>
+            <td><input type="checkbox" value="M2"></td>
+            <td><input type="checkbox" value="X2"></td>
+            <td><input type="checkbox" value="J2"></td>
+            <td><input type="checkbox" value="V2"></td>
+        </tr>
+        <tr>
+            <td>11:30-12:30 </td>
+            <td><input type="checkbox" value="L3"></td>
+            <td><input type="checkbox" value="M3"></td>
+            <td><input type="checkbox" value="X3"></td>
+            <td><input type="checkbox" value="J3"></td>
+            <td><input type="checkbox" value="V3"></td>
+        </tr>
+        <tr >
+            <td>12:30-13:30 </td>
+            <td><input type="checkbox" value="L4"></td>
+            <td><input type="checkbox" value="M4"></td>
+            <td><input type="checkbox" value="X4"></td>
+            <td><input type="checkbox" value="J4"></td>
+            <td><input type="checkbox" value="V4"></td>
+        </tr>
+        <tr>
+            <td>13:30-14:30 </td>
+            <td><input type="checkbox" value="L5"></td>
+            <td><input type="checkbox" value="M5"></td>
+            <td><input type="checkbox" value="X5"></td>
+            <td><input type="checkbox" value="J5"></td>
+            <td><input type="checkbox" value="V5"></td>
+        </tr>
+        <tr >
+            <td>14:30-15:30 </td>
+            <td><input type="checkbox" value="L6"></td>
+            <td><input type="checkbox" value="M6"></td>
+            <td><input type="checkbox" value="X6"></td>
+            <td><input type="checkbox" value="J6"></td>
+            <td><input type="checkbox" value="V6"></td>
+        </tr>
+        <tr>
+            <td>15:30-16:30 </td>
+            <td><input type="checkbox" value="L7"></td>
+            <td><input type="checkbox" value="M7"></td>
+            <td><input type="checkbox" value="X7"></td>
+            <td><input type="checkbox" value="J7"></td>
+            <td><input type="checkbox" value="V7"></td>
+        </tr>
+        <tr >
+            <td>16:30-17:30 </td>
+            <td><input type="checkbox" value="L8"></td>
+            <td><input type="checkbox" value="M8"></td>
+            <td><input type="checkbox" value="X8"></td>
+            <td><input type="checkbox" value="J8"></td>
+            <td><input type="checkbox" value="V8"></td>
+        </tr>
+        <tr>
+            <td>17:30-18:30 </td>
+            <td><input type="checkbox" value="L9"></td>
+            <td><input type="checkbox" value="M9"></td>
+            <td><input type="checkbox" value="X9"></td>
+            <td><input type="checkbox" value="J9"></td>
+            <td><input type="checkbox" value="V9"></td>
+        </tr>
+        <tr >
+            <td>18:30-19:30 </td>
+            <td><input type="checkbox" value="L10"></td>
+            <td><input type="checkbox" value="M10"></td>
+            <td><input type="checkbox" value="X10"></td>
+            <td><input type="checkbox" value="J10"></td>
+            <td><input type="checkbox" value="V10"></td>
+        </tr>
+        <tr>
+            <td>19:30-20:30 </td>
+            <td><input type="checkbox" value="L11"></td>
+            <td><input type="checkbox" value="M11"></td>
+            <td><input type="checkbox" value="X11"></td>
+            <td><input type="checkbox" value="J11"></td>
+            <td><input type="checkbox" value="V11"></td>
+        </tr>
+        <tr >
+            <td>20:30-21:30 </td>
+            <td><input type="checkbox" value="L12"></td>
+            <td><input type="checkbox" value="M12"></td>
+            <td><input type="checkbox" value="X12"></td>
+            <td><input type="checkbox" value="J12"></td>
+            <td><input type="checkbox" value="V12"></td>
+        </tr>
+        <tr>
+            <td>21:30-22:30 </td>
+            <td><input type="checkbox" value="L13"></td>
+            <td><input type="checkbox" value="M13"></td>
+            <td><input type="checkbox" value="X13"></td>
+            <td><input type="checkbox" value="J13"></td>
+            <td><input type="checkbox" value="V13"></td>
+        </tr>
+    </tbody>
+</table>
+
+<button onclick="reservar()">Reservar</button>
+<script>
+    function reservar() {
+        var checkedBoxes = document.querySelectorAll('input[type=checkbox]:checked')
+        checkedBoxes.forEach(checkbox_session => {
+            console.log(checkbox_session.value)
+            
+        });
+    }
+</script>
