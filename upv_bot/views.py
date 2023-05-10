@@ -1,7 +1,7 @@
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from .forms import ReservaForm
+from .forms import InicioReservaForm
 
 @login_required
 def index(request):
@@ -18,7 +18,7 @@ def inicio_reserva(request):
             # process the data in form.cleaned_data as required
             
             # redirect to a new URL:
-            return HttpResponseRedirect("reservar_horas")
+            return HttpResponse()
 
     # if a GET (or any other method) we'll create a blank form
     else:

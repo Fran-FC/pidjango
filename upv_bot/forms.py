@@ -8,7 +8,7 @@ class TimeInput(forms.TimeInput):
     input_type = "time"
 
 
-class ReservaForm(forms.Form):
+class InicioReservaForm(forms.Form):
     # Inicio reserva
     dia_inicio = forms.DateField(label="Dia para empezar a reservar las sesiones", widget=DateInput)
     hora_inicio = forms.TimeField(label="Hora para empezar a reservar las sesiones", widget=TimeInput)
